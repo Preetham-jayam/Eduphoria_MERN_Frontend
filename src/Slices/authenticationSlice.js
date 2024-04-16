@@ -31,7 +31,7 @@ export const fetchUserData = createAsyncThunk(
   'auth/fetchUserData',
   async (userId, { getState, dispatch }) => {
     const token = getState().auth.userInfo.token;
-    const response = await fetch(`http://localhost:8000/api/user/${userId}`, {
+    const response = await fetch(`https://eduphoria-mern-backend.onrender.com/api/user/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

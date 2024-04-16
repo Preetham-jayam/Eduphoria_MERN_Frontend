@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchCourseData = createAsyncThunk(
   'courses/fetchCourseData',
   async () => {
-    const response = await fetch('http://localhost:8000/api/courses');
+    const response = await fetch('https://eduphoria-mern-backend.onrender.com/api/courses');
     const data = await response.json();
     return data.courses;
   }
